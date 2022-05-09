@@ -1,3 +1,5 @@
+package lesson12;
+
 public class IdenticalPairs {
     public int numIdenticalPairs(int[] nums) {
         int sum = 0;

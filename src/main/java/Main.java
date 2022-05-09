@@ -1,4 +1,6 @@
 
+import lesson12.IdenticalPairs;
+import lesson12.JewelsAndStones;
 import lesson13.MaximumProduct;
 import lesson13.SortedSquares;
 

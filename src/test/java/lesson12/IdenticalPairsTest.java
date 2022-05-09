@@ -1,3 +1,6 @@
+package lesson12;
+
+import lesson12.IdenticalPairs;
 import org.junit.Assert;
 import org.junit.Test;
 

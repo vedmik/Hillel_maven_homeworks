@@ -1,3 +1,5 @@
+package lesson12;
+
 public class JewelsAndStones {
     public int numJewelsInStones(String jewels, String stones) {
         int sum = 0;
