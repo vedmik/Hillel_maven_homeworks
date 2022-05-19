@@ -22,8 +22,6 @@ public class CountWord {
                     .sorted()
                     .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -41,8 +39,6 @@ public class CountWord {
             for(Map.Entry<String, Long> m : uniqueWords.entrySet()){
                 pw.println(m.getKey()+"="+m.getValue());
             }
-
-            pw.flush();
 
         } catch (IOException e) {
             e.printStackTrace();
