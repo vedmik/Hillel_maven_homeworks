@@ -8,12 +8,11 @@ import java.util.Arrays;
 
 import lesson14.HappyNumber;
 import lesson14.MorseCode;
-<<<<<<< HEAD
+
 import lesson18.LibApp;
-=======
+
 import lesson16.LibApp;
 import lesson15.CountWord;
->>>>>>> b6147e0054c39e3f1786a7a0e1280523aa497a65
 
 public class Main {
         public static void main( String[] args ) {
