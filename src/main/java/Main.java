@@ -9,6 +9,7 @@ import java.util.Arrays;
 import lesson14.HappyNumber;
 import lesson14.MorseCode;
 import lesson18.LibApp;
+import lesson15.CountWord;
 
 public class Main {
         public static void main( String[] args ) {
@@ -44,8 +45,10 @@ public class Main {
 //                System.out.println(identicalPairs.numIdenticalPairs(new int[]{1,1,1,1}));
 //                System.out.println(identicalPairs.numIdenticalPairs(new int[]{1,2,3}));
 
+
                 LibApp libApp = new LibApp();
                 libApp.start();
-
+                CountWord countWord = new CountWord();
+                countWord.countUniqueWordsAndSaveFile("src/main/resources/tolstoy_voyna-i-mir__xoraa_436421.txt");
         }
 }
