@@ -7,8 +7,6 @@ import java.util.Arrays;
 import lesson14.HappyNumber;
 import lesson14.MorseCode;
 import lesson18.LibApp;
-import lesson18.LibApp;
-import lesson16.LibApp;
 import lesson15.CountWord;
 
 public class Main {
