@@ -3,14 +3,11 @@ import lesson12.IdenticalPairs;
 import lesson12.JewelsAndStones;
 import lesson13.MaximumProduct;
 import lesson13.SortedSquares;
-
 import java.util.Arrays;
-
 import lesson14.HappyNumber;
 import lesson14.MorseCode;
-
 import lesson18.LibApp;
-
+import lesson18.LibApp;
 import lesson16.LibApp;
 import lesson15.CountWord;
 
@@ -51,7 +48,7 @@ public class Main {
 
                 LibApp libApp = new LibApp();
                 libApp.start();
-          
+
                 CountWord countWord = new CountWord();
                 countWord.countUniqueWordsAndSaveFile("src/main/resources/tolstoy_voyna-i-mir__xoraa_436421.txt");
         }
