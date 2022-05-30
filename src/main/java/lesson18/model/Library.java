@@ -2,8 +2,8 @@ package lesson18.model;
 
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
 
 @Data
 public class Library {

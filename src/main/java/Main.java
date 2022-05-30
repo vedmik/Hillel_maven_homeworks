@@ -43,11 +43,12 @@ public class Main {
 //                System.out.println(identicalPairs.numIdenticalPairs(new int[]{1,1,1,1}));
 //                System.out.println(identicalPairs.numIdenticalPairs(new int[]{1,2,3}));
 
+//                CountWord countWord = new CountWord();
+//                countWord.countUniqueWordsAndSaveFile("src/main/resources/tolstoy_voyna-i-mir__xoraa_436421.txt");
 
-                LibApp libApp = new LibApp();
+                LibApp libApp;
+                libApp = new LibApp();
                 libApp.start();
 
-                CountWord countWord = new CountWord();
-                countWord.countUniqueWordsAndSaveFile("src/main/resources/tolstoy_voyna-i-mir__xoraa_436421.txt");
         }
 }
