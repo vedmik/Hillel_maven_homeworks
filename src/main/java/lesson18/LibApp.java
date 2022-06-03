@@ -11,7 +11,7 @@ public class LibApp {
 
     Library lib = new Library();
     Scanner in = new Scanner(System.in);
-    String dir = "src/main/resources/library.json";
+    String dir = "src/resources/library.json";
     String str;
     LibSerializer libSerializer = new LibSerializer(new ObjectMapper(), dir);
 

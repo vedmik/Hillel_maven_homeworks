@@ -15,7 +15,7 @@ public class LibSerializerTest {
     Library libTest = new Library();
     Book book = new Book();
     LibSerializer libSerializer;
-    String dir = "src/main/resources/libraryTest.json";
+    String dir = "src/resources/libraryTest.json";
     File file = new File(dir);
 
     @Before
