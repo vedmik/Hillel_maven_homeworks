@@ -1,22 +1,27 @@
 package lesson18;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lesson18.config.DbConfig;
+import lesson18.dao.BookDAO;
+import lesson18.dao.BookDAOImpl;
 import lesson18.model.Book;
 import lesson18.model.Library;
 import lesson18.service.LibSerializer;
 
+import java.sql.SQLException;
 import java.util.*;
 
 public class LibApp {
 
     Library lib = new Library();
     Scanner in = new Scanner(System.in);
-    String dir = "src/resources/library.json";
+    Book book;
     String str;
-    LibSerializer libSerializer = new LibSerializer(new ObjectMapper(), dir);
+    BookDAOImpl bookDAO = new BookDAOImpl();
 
     public void start() {
-        lib = libSerializer.readFromFile();
+
+        lib = bookDAO.getLib();
 
         do{
             System.out.println("Show the contents of the library / show");
@@ -33,13 +38,14 @@ public class LibApp {
                     break;
                 case "del" : this.del();
                     break;
+                case "exit" : bookDAO.closeConnection();
             }
 
         } while (!str.equals("exit"));
     }
 
     private void add(){
-        Book book = new Book();
+        book = new Book();
 
         System.out.println("Add new book");
         System.out.println("Enter a book Title:");
@@ -52,12 +58,12 @@ public class LibApp {
         System.out.println("Title: " + book.getTitle() + " - Author: " + book.getAuthor() + "\n\n\n");
 
         lib.getBooks().add(book);
-        libSerializer.writeToFile(lib);
+        bookDAO.addBook(book);
         this.start();
     }
 
     private void del() {
-        Book book = new Book();
+        book = new Book();
 
         System.out.println("Delete book");
         System.out.println("Enter a book Title or Author:");
@@ -65,14 +71,15 @@ public class LibApp {
 
         Iterator<Book> i = lib.getBooks().iterator();
         while (i.hasNext()) {
-            book = i.next();
-            if(book.getTitle().equals(str) || book.getAuthor().equals(str)){
-                System.out.println("Book: " + book.getTitle() + " - " + book.getAuthor() + " was deleted\n\n\n");
+            Book checkBook = i.next();
+            if(checkBook.getTitle().equals(str) || checkBook.getAuthor().equals(str)){
+                System.out.println("Book: " + checkBook.getTitle() + " - " + checkBook.getAuthor() + " was deleted\n\n\n");
+                book = checkBook;
             }
         }
         lib.getBooks().remove(book);
 
-        libSerializer.writeToFile(lib);
+        bookDAO.delBook(book);
 
         this.start();
     }
